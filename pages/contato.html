@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="stylesheet" href="../css/preview.css">
+    <title>Contato</title>
+</head>
+<body>
+    <header>
+        <img src="../img/logo.png" alt="logo FECAF" class="logo">
+        <div class="linha"></div>
+    </header>
+    <main>
+        <form>
+            <div class="preview">
+                <input class="preview__input" id="inputFile" type="file" accept="image/*"  disabled />
+                <label class="preview__label"for="inputFile"></label>
+                <img class="preview__image contact__image" src="" id="imagePreview" />
+            </div>
+            <div class="contact__input">
+                <label class="input__label">Nome</label>
+                <input type="text" class="input__text" disabled id="nome">
+            </div>
+            <div class="contact__input">
+                <label class="input__label">E-mail</label>
+                <input type="text" class="input__text" disabled id="email">
+            </div>
+            <div class="contact__input">
+                <label class="input__label">Celular</label>
+                <input type="text" class="input__text" disabled id="celular">
+            </div>
+            <div class="contact__input">
+                <label class="input__label">Endereço</label>
+                <input type="text" class="input__text" disabled id="endereco">
+            </div>
+            <div class="contact__input">
+                <label class="input__label">Cidade</label>
+                <input type="text" class="input__text" disabled id="cidade">
+            </div>
+            <div class="action">
+                <button class="button" type="button" id="editar">Editar</button>
+                <button class="button red" type="button" id="deletar">Deletar</button>
+                <button class="button oculto" type="button" id="salvar">Salvar</button>
+                <a class="button red oculto" href="../index.html">Cancelar</a>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

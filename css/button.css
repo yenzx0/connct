@@ -1,0 +1,23 @@
+.button{
+    height: 36px;
+    width: 120px;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+}
+
+.button.red {
+    background-color: red;
+}
+
+.button.secundary{
+    background-color: var(--secundary-color);
+}

@@ -1,0 +1,171 @@
+:root{
+    --primary-color: #004B79;
+    --secundary-color: #1BB267;
+    --card-color: #80A5BC;
+}
+
+body{
+    height: 100vh;
+    padding: 16px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.linha{
+    background-color: var(--secundary-color);
+    height: 1px;
+    width: 100%;
+}
+.contact{
+    position: relative;
+    width: 100%;
+}
+
+.contact__input {
+    height: 48px;
+    width: 100%;
+    border: 1px solid var(--secundary-color);
+    border-radius: 4px;
+    outline: none;
+    padding-inline: 8px;
+}
+
+.contact__icon {
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    color: var(--secundary-color);
+}
+
+.legenda {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.legenda__cliente{
+    background-color: var(--secundary-color);
+}
+.legenda__colaborador{
+    background-color: var(--primary-color);
+}
+
+.card-container  {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card{
+    position: relative;
+    height: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+        "image name"
+        "image phone";
+    grid-template-columns: 48px 1fr;
+    place-content: center;
+    gap: 8px;
+    background-color: var(--card-color);
+    color: white;
+    border-radius: 8px;
+    padding-inline: 20px;
+    overflow: hidden;
+}
+
+.card__image{
+    grid-area: image;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card__name{
+    grid-area: name;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card__contact-phone{
+    grid-area: phone;
+    display: flex;
+    gap: 8px;
+    font-size: .8rem;
+}
+
+.card__tag-color{
+    position: absolute;
+    height: 100%;
+    width: 12px;
+    background-color: var(--primary-color);
+}
+
+
+@media (min-width: 768px) {
+    body{
+        padding: 64px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body{
+        gap: 80px;
+    }
+    header{
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .legenda{
+        width: auto;
+        justify-self: flex-end;
+        gap:12px;
+    }
+    .linha {
+        position: absolute;
+        bottom: -32px;
+    }
+
+    .card-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card{
+        height: 290px;
+        width: 250px;
+        grid-template-areas: 
+            "image"
+            "name"
+            "phone";
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+    .card__image {
+        height: 152px;
+        width: 152px;
+        border: 4px solid var(--primary-color);
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .card__tag-color{
+        position: absolute;
+        height: 24px;
+        width: 100%;
+        bottom: 0;
+        /* background-color: var(--primary-color); */
+    }
+}
