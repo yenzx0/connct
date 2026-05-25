@@ -1,29 +1,26 @@
 'use strict'
+import { preview } from './preview.js'
 
 function buscarContato() {
     const id = Number(localStorage.getItem('id'))
-    console.log('ID:', id)
-    console.log('Array contatos:', contatos)
-    
     const contato = contatos.find(c => c.id === id)
-    console.log('Contato encontrado:', contato)
-    
     return contato
 }
 
 const habilitarCampo = campo => campo.disabled = false
+
 const trocarBotao = botao => {
-    if (botao.id === 'salvar') {
-        botao.style.display = 'block'
+    if (botao.id === 'editar' || botao.id === 'deletar') {
+        botao.style.display = 'none'
         return
     }
-    botao.style.display = 'none'
+    botao.style.display = 'flex'  
 }
 
-function habilitarFormulario(){
-        document.querySelectorAll('input').forEach(habilitarCampo)
-        document.querySelectorAll('button').forEach(trocarBotao)
-
+function habilitarFormulario() {
+    document.querySelectorAll('input').forEach(habilitarCampo)
+    document.querySelectorAll('button').forEach(trocarBotao)
+    document.getElementById('inputFile').disabled = false
 }
 
 function preencherFormulario() {
@@ -43,3 +40,5 @@ function preencherFormulario() {
 preencherFormulario()
 
 document.getElementById('editar').addEventListener('click', habilitarFormulario)
+document.getElementById('inputFile')
+        .addEventListener('change', () => preview('inputFile', 'imagePreview'))

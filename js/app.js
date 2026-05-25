@@ -41,11 +41,9 @@ function criarCard(contatos) {
     return card;
 }
 
-// função para carregar os cards dinamicamente
 function carregarCards() { 
     const container = document.getElementById('card-container');
 
-   // inserindo na pagina HTML
    const cards = contatos.map(criarCard);
    container.replaceChildren(...cards);
 
